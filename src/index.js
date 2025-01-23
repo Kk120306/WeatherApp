@@ -1,17 +1,30 @@
 import './styles.css';
 import { getData } from './modules/api.js';
+import { displayCurrentWeather } from './modules/dom.js';
 
 
-function collectWeather(){
-    let location = prompt("Enter a valid location to check the weather");
+const searchButton = document.getElementById("search-btn");
+const searchLocation = document.getElementById("site-search");
+
+
+function collectWeather(location = "vancouver") {
     getData(location).then((data) => {
-        if (data && data.days){
-            console.log(data.days[0]);
-
-        } else{
-            console.log("weather data not avaliable");
+        if (data && data.days) {
+            displayCurrentWeather(data.resolvedAddress, data.days[0]);
+        } else {
+            alert("Weather data not available");
         }
-    })
+    });
 }
+
+
+searchButton.addEventListener("click", () => {
+    const location = searchLocation.value.trim(); 
+    if (location) {
+        collectWeather(location); 
+    } else {
+        console.log("Please enter a valid location");
+    }
+});
 
 collectWeather();

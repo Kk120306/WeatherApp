@@ -1,0 +1,145 @@
+body {
+    background-image: url('./asset/background.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh;
+    margin: 0; 
+    border: 0;
+}
+
+.container {
+    display: flex;
+    height: 100%; 
+    font-family: 'Roboto', sans-serif;
+    justify-content: space-between;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: 80%; 
+    padding: 50px;
+    flex: 2;
+    color: white;
+}
+
+
+.date-text{
+    font-size: 15px;
+}
+
+.condition-text{
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.date-text br {
+    line-height: 5px; 
+}
+
+.temperature-text{
+    font-size: 150px;
+    font-weight: 800;
+}
+
+.location-text{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.right-container {
+    background-color: white;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px 0 0 10px;
+    flex: 1;
+    padding: 20px;
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    overflow-y: auto; 
+    overflow-x: hidden; 
+    max-height: 100%; 
+    padding-right: 10px; 
+}
+
+
+.card{
+    width: 170px;
+    height: 150px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-temp{
+    margin-top: 10px;
+    padding: 5px;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+
+.card-text{
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.card-date{
+    font-size: 15px;
+}
+
+#card-weather{
+    width: 60px;
+}
+
+#site-search{
+    background-color: grey;
+    opacity: 0.2;
+    width: 25vw;
+    border-radius: 10px;
+}
+
+
+button{
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: transparent;
+
+}
+
+#search-btn{
+    width: 20px;
+}
+
+.search-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+button:active{
+    scale: 0.9;
+}
